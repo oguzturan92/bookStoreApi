@@ -13,7 +13,9 @@ Bu proje, .net 9 ile geliştirilmiş, CQRS ve Onion mimarisi kullanılmış, kit
 - CategoriesController (GetAll, Create, GetById, Update, Delete)
 - AppUsersController (Register, Login)
 
-
+# Kullanım
+- Persistance katmanına konumlanarak migration oluşturun, örnek: dotnet ef migrations add CreateMig --startup-project ../../BookStore.Presentation/WebApi
+- Oluşturulan migration'u, persistance katmanına konumlanarak update edin, örnek: dotnet ef database update --startup-project ../../BookStore.Presentation/WebApi
 - WebApi'i çalıştırın
 - https://localhost:5201/swagger/index.html ile swagger'ı açın
 - Register endpoint'i ile kayıt olun
